@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root{
+     /* Primary */
+
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue: hsl(244, 38%, 16%);
+    --Soft-violet: hsl(277, 64%, 61%);
+
+    /* Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --Slightly-transparent-white : hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+
+    /* Body Copy */
+
+    --Font-size: 15px;
+
+    /* Fonts */
+
+    --font-lexend-deca: 'Lexend Deca', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+
+    /* Weight */
+
+    --font-weight400: 400 ;
+    --font-weight700: 700 ;
+}
+
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+footer{
+    margin-top: 100px;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+  }
+  .attribution a {
+    color: white;
+  }
+
+body{
+    background-color: var(--Very-dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card{
+    overflow: hidden;
+    background-color: var(--Dark-desaturated-blue);
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    color: var(--White);
+    width: 1000px;
+    border-radius: 8px;
+    height: 370px;
+} 
+
+
+.info>h1{
+    font-size: 35px;
+    font-family: var(--font-inter);
+}
+
+h1>span{
+    color: var(--Soft-violet);
+}
+
+
+.discription{
+    width: 50%;
+    margin: 40px 40px 30px 50px;
+}
+
+picture{
+    width: 50%;
+    object-fit: contain;
+    position: relative;
+}
+
+picture>img{
+    width: 100%;
+    
+}
+
+.overlay{
+    position: absolute;
+    background: rgba(64, 0, 106, 0.4);;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: brightness(1.75);
+}
+
+.info>p{
+    font-size: 14px;
+    font-family: var(--font-inter);
+    color: var(--Slightly-transparent-white);
+    width: 370px;
+    padding-top: 30px;
+    padding-bottom: 24px;
+    line-height: 22px;
+}
+
+.statics{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    font-family: var(--font-inter);
+    font-size: 22px;
+}
+
+.templates, .queries{
+    padding-left: 100px;
+
+}
+
+
+.companies{
+    position: relative;
+}
+
+.companies::after{
+    position: absolute;
+    content: "COMPANIES";
+    font-size: 10px;
+    color: var(--Slightly-transparent-white);
+    bottom: -11px;
+    right: -11px;
+    padding-top: 10px;
+    
+}
+
+.templates{
+    position: relative;
+}
+
+.templates::after{
+    position: absolute;
+    content: "TEMPLATES";
+    font-size: 10px;
+    color: var(--Slightly-transparent-white);
+    bottom: -11px;
+    right: -19px;
+    padding-top: 10px;
+    
+}
+
+.queries{
+    position: relative;
+}
+
+.queries::after{
+    position: absolute;
+    content: "QUERIES";
+    font-size: 10px;
+    color: var(--Slightly-transparent-white);
+    bottom: -11px;
+    right:  15px;
+    padding-top: 10px;
+    
+}
+
+@media only screen and (max-width: 900px){
+
+.card{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 750px;
+    width: 350px;
+}
+picture{
+    width: 100%;
+}
+
+.overlay{
+ height: 99%;
+}
+
+.discription{
+    width: 80%;
+    height: 500px;
+    margin: 25px;
+}
+
+.info>h1{
+    font-size: 28px;
+    text-align: center;
+    padding-left: 25px;
+}
+
+.info > p{
+    text-align: center;
+    width: 300px;
+}
+
+.statics{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.templates, .queries, .companies{
+    padding-bottom: 30px;
+    padding-left: 0;
+}
+
+.queries{
+    padding-left: 9px;
+}
+
+
+.companies::after{
+    bottom: 18px;
+    right: -2px;
+}
+
+.templates::after{
+    bottom: 18px;
+    right: -10px;
+}
+
+.queries::after{
+    bottom: 18px;
+    right: 10px;
+}
+
+
+
+
+
+
+}
+
